@@ -52,7 +52,7 @@ module.exports = {
     '~/plugins/modernizr-plugin',
     { src: '~/plugins/vue-cookie-law', mode: 'client' },
     '~/plugins/fontawesome',
-    '~/plugins/vue2-google-maps',
+    // '~/plugins/vue2-google-maps',
   ],
 
   /*
@@ -114,7 +114,7 @@ module.exports = {
     extend(config, ctx) {},
 
     // set logic for loading vue2 google map
-    transpile: [/^vue2-google-maps($|\/)/],
+    // transpile: [/^vue2-google-maps($|\/)/],
   },
 
   // Site Map Options
