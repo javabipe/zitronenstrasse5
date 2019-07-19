@@ -106,6 +106,11 @@ module.exports = {
     },
   },
 
+  // Custom / overwrite rules
+  purgeCSS: {
+    styleExtensions: ['.css', '.scss', '.sass'],
+  },
+
   /*
    ** Build configuration
    */
