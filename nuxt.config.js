@@ -120,6 +120,9 @@ module.exports = {
      */
     extend(config, ctx) {},
 
+    // purge css
+    extractCSS: true,
+
     // set logic for loading vue2 google map
     transpile: [/^vue2-google-maps($|\/)/],
   },
