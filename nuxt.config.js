@@ -52,7 +52,6 @@ module.exports = {
     '~/plugins/modernizr-plugin',
     { src: '~/plugins/vue-cookie-law', mode: 'client' },
     '~/plugins/fontawesome',
-    '~/plugins/vue2-google-maps',
   ],
 
   /*
@@ -112,9 +111,6 @@ module.exports = {
      ** You can extend webpack config here
      */
     extend(config, ctx) {},
-
-    // set logic for loading vue2 google map
-    transpile: [/^vue2-google-maps($|\/)/],
   },
 
   // Site Map Options
