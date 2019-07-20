@@ -120,6 +120,7 @@ module.exports = {
      */
     extend(config, ctx) {},
 
+    // TODO: this is doing some works, but event too much. lost styles (i.e Logo)
     // purge css
     extractCSS: true,
 
