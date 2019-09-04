@@ -846,6 +846,61 @@ const placesList = [
       lng: 13.409557,
     },
   },
+  {
+    // 062
+    // ChIJnbNuyRhPqEcRUIN-creCDbw
+    title: 'Holzmarkt',
+    address: 'Holzmarktstraße 19, 10243',
+    thumb: '062_holzmarkt.jpg',
+    thumbCredits: 'Holzmarkt FB Page',
+    website: 'https://www.holzmarkt.com/',
+    fbPage: 'https://www.facebook.com/Holzmarkt25',
+    position: {
+      lat: 52.51272059999999,
+      lng: 13.4244301,
+    },
+  },
+  {
+    // 063
+    // ChIJO-QpGJVPqEcRe3u5xlOC0Iw
+    title: 'Tempelhof Gemeinschaftsgarten Allmende-Kontor',
+    address: 'Tempelhofer Feld (Schillerkiez), 12049',
+    thumb: '063_tempelhof_garden.jpg',
+    thumbCredits: 'Gemeinschaftsgarten Allmende-Kontor Website',
+    website: 'https://www.allmende-kontor.de/',
+    position: {
+      lat: 52.4744782,
+      lng: 13.4169272,
+    },
+  },
+  {
+    // 064
+    // ChIJt4VZ0U1OqEcRkg1EbzcZyvU
+    title: 'Duo | Sicilian Ice Cream',
+    address: 'Skalitzer Str. 82, 10997',
+    thumb: '064_duo.jpg',
+    thumbCredits: 'Duo FB Page',
+    website: 'http://duoicecream.de/',
+    fbPage: 'https://www.facebook.com/duoicecream/',
+    position: {
+      lat: 52.5006767,
+      lng: 13.4388173,
+    },
+  },
+  {
+    // 065
+    // ChIJkYKVILRPqEcRgYywmXjU7_8
+    title: 'Lager Lager | Neukölln',
+    address: 'Pflügerstraße 68, 12047',
+    thumb: '065_lager_lager.jpg',
+    thumbCredits: 'Lager Lager Website',
+    website: 'https://www.lagerlagerberlin.de/',
+    fbPage: 'https://www.facebook.com/lagerlagerberlin/',
+    position: {
+      lat: 52.4915536,
+      lng: 13.4286914,
+    },
+  },
 ]
 
 export default placesList
