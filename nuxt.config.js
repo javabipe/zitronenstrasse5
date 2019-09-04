@@ -78,6 +78,14 @@ module.exports = {
         id: googleAnalyticsKey,
       },
     ],
+
+    // nuxt google map
+    [
+      'nuxt-gmaps',
+      {
+        key: googleMapApiKey,
+      },
+    ],
   ],
 
   // Load globally Functions / Variables / Mixins

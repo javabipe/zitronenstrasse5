@@ -1,7 +1,11 @@
 <template lang="pug">
   .map-main-wrapper
-    h1.heading-title
-      | Zitronenstrasse
+    GMap(
+    	:cluster="{options: {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'}}"
+      :center="{lat: locations[0].lat, lng: locations[0].lng}"
+    	:options="{fullscreenControl: false, streetViewControl: false, mapTypeControl: false, zoomControl: true, gestureHandling: 'cooperative'}"
+    	:zoom="6"
+    )
 </template>
 
 <style lang="sass">
@@ -17,7 +21,32 @@ export default {
 
   data() {
     return {
-      // empty
+      locations: [
+        {
+          lat: 44.933076,
+          lng: 15.629058,
+        },
+        {
+          lat: 45.815,
+          lng: 15.9819,
+        },
+        {
+          lat: 45.12,
+          lng: 16.21,
+        },
+      ],
+
+      pins: {
+        selected: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB...',
+        notSelected:
+          'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAM...',
+      },
+
+      // mapStyle: [
+      //   ...
+      // ],
+      //
+      // currentLocation: {}
     }
   },
 
