@@ -1,19 +1,34 @@
 <template lang="pug">
   .map-main-wrapper
     GMap(
-    	:cluster="{options: {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'}}"
-      :center="{lat: locations[0].lat, lng: locations[0].lng}"
-    	:options="{fullscreenControl: false, streetViewControl: false, mapTypeControl: false, zoomControl: true, gestureHandling: 'cooperative'}"
-    	:zoom="6"
+      :center='center'
+      :zoom='zoom'
+      :options='options'
     )
 </template>
 
 <style lang="sass">
 .map-main-wrapper
   height: 100%
+
+// plugin wrapper overwritten
+.GMap,
+.GMap__Wrapper
+  width: 100%
+  height: 100%
+
+  // map bg when loading
+  .gm-style
+    background: $color_map_bg
+
+  // remove google cc
+  // and remove some weird grey box set on right side from google
+  .gm-style-cc
+    display: none
 </style>
 
 <script>
+import mapStylesDark from '~/components/MapGoogle/_mapStylesDark.js'
 export default {
   components: {
     // empty
@@ -21,25 +36,17 @@ export default {
 
   data() {
     return {
-      locations: [
-        {
-          lat: 44.933076,
-          lng: 15.629058,
-        },
-        {
-          lat: 45.815,
-          lng: 15.9819,
-        },
-        {
-          lat: 45.12,
-          lng: 16.21,
-        },
-      ],
-
-      pins: {
-        selected: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB...',
-        notSelected:
-          'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAM...',
+      center: {
+        lat: 52.48383,
+        lng: 13.4395546,
+      },
+      zoom: 14,
+      options: {
+        streetViewControl: false,
+        fullscreenControl: false,
+        mapTypeControl: false,
+        // set custom map styles
+        styles: mapStylesDark,
       },
 
       // mapStyle: [
