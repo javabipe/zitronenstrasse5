@@ -64,6 +64,8 @@ module.exports = {
 
     '@nuxtjs/sitemap',
 
+    '@nuxtjs/axios',
+
     // for font-face
     'nuxt-webfontloader',
 
@@ -145,9 +147,7 @@ module.exports = {
   head: {
     script: [
       {
-        src: `https://maps.googleapis.com/maps/api/js?key=${googleMapApiKey}&callback=initMap`,
-        // async: true,
-        // defer: true,
+        // empty
       },
     ],
 
