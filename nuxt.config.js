@@ -143,6 +143,14 @@ module.exports = {
    ** https://github.com/declandewet/vue-meta#recognized-metainfo-properties
    */
   head: {
+    script: [
+      {
+        src: `https://maps.googleapis.com/maps/api/js?key=${googleMapApiKey}&callback=initMap`,
+        // async: true,
+        // defer: true,
+      },
+    ],
+
     title: headTitle,
 
     htmlAttrs: {
@@ -272,12 +280,6 @@ module.exports = {
       {
         rel: 'canonical',
         href: thisAppMainUrl,
-      },
-    ],
-
-    script: [
-      {
-        // js external here
       },
     ],
   },
