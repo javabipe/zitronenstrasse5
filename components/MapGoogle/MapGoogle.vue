@@ -1,7 +1,14 @@
 <template lang="pug">
-  .map-main-wrapper
-    h1.heading-title
-      | Zitronenstrasse
+.map-main-wrapper(
+  ref="googleMap"
+)
+  div(
+    v-if='Boolean(this.google) && Boolean(this.map)'
+  )
+    //- div(
+    //-  :google='google'
+    //-  :map='map'
+    //-)
 </template>
 
 <style lang="sass">
@@ -10,6 +17,8 @@
 </style>
 
 <script>
+import GoogleMapsApiLoader from 'google-maps-api-loader'
+
 // https://markus.oberlehner.net/blog/using-the-google-maps-api-with-vue/
 // import '~/components/MapGoogle/_gmaps.js'
 
@@ -18,34 +27,30 @@ export default {
     // empty
   },
 
-  data() {
-    return {
-      // empty
-    }
+  props: {
+    google: null,
+    map: null,
   },
 
-  // mounted: WHEN ALL code on server is already loaded!
-  mounted() {
-    console.log('MAP component >> START')
-    //
-    // try {
-    //   const google = await gmapsInit()
-    //   const geocoder = new google.maps.Geocoder()
-    //   const map = new google.maps.Map(this.$el)
-    //
-    //   geocoder.geocode({ address: 'Germany' }, (results, status) => {
-    //     if (status !== 'OK' || !results[0]) {
-    //       throw new Error(status)
-    //     }
-    //
-    //     map.setCenter(results[0].geometry.location)
-    //     map.fitBounds(results[0].geometry.viewport)
-    //   })
-    // } catch (error) {
-    //   console.error(error)
-    // }
+  async mounted() {
+    const googleMapApiHere = await GoogleMapsApiLoader({
+      apiKey: process.env.googleMapApiKey,
+    })
+    this.google = googleMapApiHere
+    this.initializeMap()
+  },
 
-    console.log('MAP component >> END')
+  methods: {
+    initializeMap() {
+      const mapContainer = this.$refs.googleMap
+      this.map = new this.google.maps.Map(mapContainer, {
+        center: {
+          lat: 52.48383,
+          lng: 13.4395546,
+        },
+        zoom: 14,
+      })
+    },
   },
 }
 </script>
