@@ -69,10 +69,8 @@ export default {
         styles: mapStylesDark,
       },
 
-      // mapStyle: [
-      //   ...
-      // ],
-      //
+      // added markers slow down performances
+      // TODO: try to load places asyn later
       placelist: placesList,
 
       // marker custom styles passd to each marker
