@@ -1,5 +1,11 @@
 <template lang="pug">
   .c-map
+
+    //- hidden heading for seo.
+    //- inside component for design reasons (I'm lazy)
+    h1.heading-title
+      | Zitronenstrasse
+
     GMap(
       :center='center'
       :zoom='zoom'
@@ -28,6 +34,10 @@
   // remove google cc
   // and remove some weird grey box set on right side from google
   .gm-style-cc
+    display: none
+
+  // title just for seo, not shown
+  .heading-title
     display: none
 </style>
 
