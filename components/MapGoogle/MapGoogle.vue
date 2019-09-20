@@ -16,6 +16,7 @@
         key="index"
         :position="marker.position"
         :options="markerOptions"
+        @click="clickMarkerAction(marker)"
       )
 </template>
 
@@ -79,13 +80,21 @@ export default {
       },
 
       // current clicked marker
-      currentMarker: {},
+      currentMarker: null,
     }
   },
 
   // mounted: WHEN ALL code on server is already loaded!
   mounted() {
     console.log('MAP component but no map')
+  },
+
+  methods: {
+    clickMarkerAction(currentMarker) {
+      console.log('================')
+      console.log('CLICK')
+      console.log(currentMarker)
+    },
   },
 }
 </script>
