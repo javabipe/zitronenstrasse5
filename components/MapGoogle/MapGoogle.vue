@@ -8,6 +8,7 @@
       v-for="(marker, index) in placelist"
       key="index"
       :position="marker.position"
+      :options="markerOptions"
     )
 </template>
 
@@ -31,6 +32,7 @@
 
 <script>
 import mapStylesDark from '~/components/MapGoogle/_mapStylesDark.js'
+import customMarker from '~/components/MapGoogle/_markerCustomStyles.js'
 import placesList from '~/static/places_list.js'
 
 export default {
@@ -59,6 +61,11 @@ export default {
       // ],
       //
       placelist: placesList,
+
+      // marker custom styles passd to each marker
+      markerOptions: {
+        icon: customMarker,
+      },
 
       // current clicked marker
       currentMarker: {},
