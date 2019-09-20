@@ -4,6 +4,11 @@
     :zoom='zoom'
     :options='options'
   )
+    GMapMarker(
+      v-for="(marker, index) in placelist"
+      key="index"
+      :position="marker.position"
+    )
 </template>
 
 <style lang="sass">
@@ -26,6 +31,8 @@
 
 <script>
 import mapStylesDark from '~/components/MapGoogle/_mapStylesDark.js'
+import placesList from '~/static/places_list.js'
+
 export default {
   components: {
     // empty
@@ -33,6 +40,7 @@ export default {
 
   data() {
     return {
+      // map options
       center: {
         lat: 52.48383,
         lng: 13.4395546,
@@ -50,7 +58,10 @@ export default {
       //   ...
       // ],
       //
-      // currentLocation: {}
+      placelist: placesList,
+
+      // current clicked marker
+      currentMarker: {},
     }
   },
 
