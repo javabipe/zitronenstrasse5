@@ -21,7 +21,7 @@
 
 <style lang="sass">
 // wrapper required for overwriting plugin default styles
-.c-map,
+.c-map
   height: 100%
 
   // plugin wrapper overwritten
