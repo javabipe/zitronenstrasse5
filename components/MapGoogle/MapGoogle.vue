@@ -14,17 +14,16 @@
 </template>
 
 <style lang="sass">
-.c-map
+// wrapper required for overwriting plugin default styles
+.c-map,
+// plugin wrapper overwritten
+.GMap,
+.GMap__Wrapper
   height: 100%
 
-  // plugin wrapper overwritten
-  .GMap,
-  .GMap__Wrapper
-    height: 100%
-
-    // map bg when loading
-    .gm-style
-      background: $color_map_bg
+  // map bg when loading
+  .gm-style
+    background: $color_map_bg
 
   // remove google cc
   // and remove some weird grey box set on right side from google
