@@ -1,31 +1,27 @@
 <template lang="pug">
-  .map-main-wrapper
-    GMap(
-      :center='center'
-      :zoom='zoom'
-      :options='options'
-    )
+  GMap(
+    :center='center'
+    :zoom='zoom'
+    :options='options'
+  )
 </template>
 
 <style lang="sass">
-.map-main-wrapper
+// plugin wrapper overwritten
+.GMap,
+.GMap__Wrapper
+  width: 100%
   height: 100%
+  background: #f90
 
-  // plugin wrapper overwritten
-  .GMap,
-  .GMap__Wrapper
-    width: 100%
-    height: 100%
-    background: #f90
+  // map bg when loading
+  .gm-style
+    background: $color_map_bg
 
-    // map bg when loading
-    .gm-style
-      background: $color_map_bg
-
-    // remove google cc
-    // and remove some weird grey box set on right side from google
-    .gm-style-cc
-      display: none
+  // remove google cc
+  // and remove some weird grey box set on right side from google
+  .gm-style-cc
+    display: none
 </style>
 
 <script>
