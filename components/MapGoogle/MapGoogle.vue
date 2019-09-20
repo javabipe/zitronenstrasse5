@@ -22,10 +22,12 @@
 <style lang="sass">
 // wrapper required for overwriting plugin default styles
 .c-map,
-// plugin wrapper overwritten
-.GMap,
-.GMap__Wrapper
   height: 100%
+
+  // plugin wrapper overwritten
+  .GMap,
+  .GMap__Wrapper
+    height: 100%
 
   // map bg when loading
   .gm-style
