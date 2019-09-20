@@ -1,28 +1,30 @@
 <template lang="pug">
-  GMap(
-    :center='center'
-    :zoom='zoom'
-    :options='options'
-  )
-    GMapMarker(
-      v-for="(marker, index) in placelist"
-      key="index"
-      :position="marker.position"
-      :options="markerOptions"
+  .c-map
+    GMap(
+      :center='center'
+      :zoom='zoom'
+      :options='options'
     )
+      GMapMarker(
+        v-for="(marker, index) in placelist"
+        key="index"
+        :position="marker.position"
+        :options="markerOptions"
+      )
 </template>
 
 <style lang="sass">
-// plugin wrapper overwritten
-.GMap,
-.GMap__Wrapper
-  width: 100%
+.c-map
   height: 100%
-  background: #f90
 
-  // map bg when loading
-  .gm-style
-    background: $color_map_bg
+  // plugin wrapper overwritten
+  .GMap,
+  .GMap__Wrapper
+    height: 100%
+
+    // map bg when loading
+    .gm-style
+      background: $color_map_bg
 
   // remove google cc
   // and remove some weird grey box set on right side from google
