@@ -1,4 +1,15 @@
 <template lang="pug">
   nuxt-link(to='/', title='Back to the home page')
-    | Back to the home page here
+    | {{ buttonText }}
 </template>
+
+<script>
+export default {
+  props: {
+    buttonText: {
+      type: String,
+      default: 'Back to the home page DEFAULT',
+    },
+  },
+}
+</script>
