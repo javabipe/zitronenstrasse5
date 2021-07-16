@@ -8,7 +8,7 @@ export default {
   props: {
     buttonText: {
       type: String,
-      default: 'Back to the home page DEFAULT',
+      default: 'Back to the home page',
     },
   },
 }
