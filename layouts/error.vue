@@ -14,9 +14,7 @@
       h2.error-message
         | This page could not be found
 
-      p(v-if='error.statusCode === 404')
-        nuxt-link.error-link(to='/', title='Back to the home page')
-          | Back to the home page
+      ButtonBackHome(v-if='error.statusCode === 404')
 </template>
 
 <script>
