@@ -81,8 +81,9 @@ export default {
 
     // Modules (https://go.nuxtjs.dev/config-modules)
     modules: [
+        // TODO: comment out PWA. issue remain. so issue is storyblock? issue also on error page
         // https://go.nuxtjs.dev/pwa
-        '@nuxtjs/pwa',
+        // '@nuxtjs/pwa',
         '@nuxtjs/eslint-module',
 
         '@nuxtjs/sitemap',
