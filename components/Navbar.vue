@@ -4,18 +4,22 @@
 //- answer by: ForbesLindesay commented on 23 Apr 2014
 -
     var naviItems = [
-      {
-        title: 'Home',
-        link: '/'
-      },
-      {
-        title: 'About',
-        link: '/about'
-      },
-      {
-        title: 'Contact',
-        link: '/contact'
-      }
+        {
+            title: 'Home',
+            link: '/'
+        },
+        {
+            title: 'Yolo | test',
+            link: '/yolo'
+        },        
+        {
+            title: 'About',
+            link: '/about'
+        },
+        {
+            title: 'Contact',
+            link: '/contact'
+        }
     ];
 
 nav.navigation(role='navigation', v-bind:class='{ "is-nav-open": isNavOpen }')
@@ -156,7 +160,8 @@ export default {
   // LI
   .item
     display: block
-    height: calc(100% / 3)
+    // divide by number of links
+    height: calc(100% / 4)
     position: relative
     opacity: 0
     display: flex
