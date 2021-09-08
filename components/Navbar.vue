@@ -60,15 +60,16 @@ export default {
         },
     },
 
-    head() {
-        return {
-            // OVERRIDE the logic in vue config for body element.
-            // we have to ADD just one class
-            bodyAttrs: {
-                class: this.isNavOpen ? 'is-navigation-open-body' : '',
-            },
-        }
-    },
+    // TODO: check me again
+    // head() {
+    //     return {
+    //         // OVERRIDE the logic in vue config for body element.
+    //         // we have to ADD just one class
+    //         bodyAttrs: {
+    //             class: this.isNavOpen ? 'is-navigation-open-body' : '',
+    //         },
+    //     }
+    // },
 }
 </script>
 
