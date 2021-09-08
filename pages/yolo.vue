@@ -8,6 +8,9 @@
 
 <script>
 export default {
+    // it seems that when call any HEAD property, all data from nuxt config are "re-called"
+    // this has sense.
+    // but for us MODERNIZR has already overwritten defual nuxt (nuxt.config) html classes, so issue
     head: {
         title: 'yolo CUSTOM meta title',
         meta: [
