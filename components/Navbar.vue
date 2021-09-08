@@ -8,10 +8,10 @@
             title: 'Home',
             link: '/'
         },
-        {
-            title: 'Yolo | test',
-            link: '/yolo'
-        },        
+        // {
+        //     title: 'Yolo | test',
+        //     link: '/yolo'
+        // },        
         {
             title: 'About',
             link: '/about'
