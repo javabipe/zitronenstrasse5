@@ -217,12 +217,6 @@ export default {
     head: {
         title: headTitle,
 
-        // TODO: crash at nav bar click or page change
-        // // modernizr class added on <html> tag
-        // htmlAttrs: {
-        //     class: 'no-js',
-        // },
-
         htmlAttrs: {
             // modernizr class added on <html> tag
             class: 'HEY no-js YO',
