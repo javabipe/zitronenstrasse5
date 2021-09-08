@@ -8,6 +8,7 @@
             title: 'Home',
             link: '/'
         },
+        // now jumping between home and yolo works. not sure if is pwa or storyblok fecth data
         {
             title: 'Yolo | test',
             link: '/yolo'
