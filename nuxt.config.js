@@ -104,7 +104,7 @@ export default {
         [
             'nuxt-modernizr',
             {
-                // setClasses: requires to set 'no-js' class in html DOM. For nuxt: into the app.html file
+                // setClasses: requires to set 'no-js' class in html DOM.
                 options: ['setClasses'],
                 'feature-detects': [
                     // empty now ...
