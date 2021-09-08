@@ -30,7 +30,7 @@
         "hover.css": "^2.3.2",
         "node-sass": "^4.12.0",
         "nuxt": "^2.15.7",
-        "nuxt-modernizr": "^1.0.2",
+        "nuxt-modernizr": "^2.0.8",
         "nuxt-webfontloader": "^1.1.0",
         "pug": "^3.0.1",
         "pug-plain-loader": "^1.0.0",

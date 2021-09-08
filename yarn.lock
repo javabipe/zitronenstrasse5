@@ -924,10 +924,10 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@dword-design/functions@^3.0.0":
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/@dword-design/functions/-/functions-3.0.5.tgz#0855cab1ecff3b72a22de32f2635f63f8c5061bf"
-  integrity sha512-fDxIVKalrcIjDxfC/VQFxIugoZQjZq/k/PiBxcjZXoa15PfGGM+RH8eKy+umGOhXPhVXUzgYNqJ+2HIevPW3aQ==
+"@dword-design/functions@^4.0.0":
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/@dword-design/functions/-/functions-4.0.6.tgz#541b027d791e1cfd466fafb067d19977f21a391b"
+  integrity sha512-eq/X5VbfzM//zkKQZyHNUqoxuVZWIPa1EfMlbM6FZYjzWq2IzJbQNSfu6dp2Y6fDwWMPiYcH1gW1KqRIyhh2mw==
   dependencies:
     delay "^5.0.0"
     endent dword-design/endent#fork
@@ -3731,7 +3731,7 @@ end-of-stream@^1.0.0, end-of-stream@^1.1.0:
   dependencies:
     once "^1.4.0"
 
-endent@dword-design/endent#fork:
+"endent@github:dword-design/endent#fork":
   version "1.4.0"
   resolved "https://codeload.github.com/dword-design/endent/tar.gz/be5433db67eaec07c6c9d00ba3bed2ed946dc664"
   dependencies:
@@ -6531,20 +6531,20 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-nuxt-modernizr@^1.0.2:
-  version "1.0.16"
-  resolved "https://registry.yarnpkg.com/nuxt-modernizr/-/nuxt-modernizr-1.0.16.tgz#2ced8f2c9d421cd5820dab281864aaf926827431"
-  integrity sha512-resdBSYMnXsXKFX2eedQBu3v4yvj9aOA6TC5embbTHldhvfD/JnrUUIkDnVPNb3dBPK5nZkRKeiIIrqh0DExXQ==
+nuxt-modernizr@^2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/nuxt-modernizr/-/nuxt-modernizr-2.0.8.tgz#11fe2f602aa5b362619586b9f5230d238714647f"
+  integrity sha512-Xe/D5ywMtfJkVbWHOzUYPYufM7vsj4FQuCarhquSjgNLS6di2wjiy4oaHdl5pZp6zs9Ho0ymgrVS3Pm9h84NkQ==
   dependencies:
     modernizr "^3.11.3"
-    nuxt-push-plugins "^1.0.16"
+    nuxt-push-plugins "^2.0.0"
 
-nuxt-push-plugins@^1.0.16:
-  version "1.0.20"
-  resolved "https://registry.yarnpkg.com/nuxt-push-plugins/-/nuxt-push-plugins-1.0.20.tgz#6317fc4607a1de3d299bc4e3f3ca58e5a357ad7c"
-  integrity sha512-rVxeX9xtoZZN46GkrlUSoyJDWErpTUGE+JfhcYgfGrWJu1AMYEqW4xAm5WI1uNIt9z5xg88E3nns1AQce3wkFQ==
+nuxt-push-plugins@^2.0.0:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/nuxt-push-plugins/-/nuxt-push-plugins-2.0.7.tgz#0ce8a5b95f12527f1d110d7281a36257fb0e0756"
+  integrity sha512-T53swQGhklVDeXf9xb06ZNPJS5UOAT+2fBDZZisxTbp+82G8wftfFoEj9NZtjLjOuv2kbKIRWVK00/ge4eRcGg==
   dependencies:
-    "@dword-design/functions" "^3.0.0"
+    "@dword-design/functions" "^4.0.0"
 
 nuxt-webfontloader@^1.1.0:
   version "1.1.0"
