@@ -222,6 +222,11 @@ export default {
         //     class: 'no-js',
         // },
 
+        htmlAttrs: {
+            // modernizr class added on <html> tag
+            class: 'HEY no-js YO',
+        },
+
         meta: [
             {
                 'http-equiv': 'x-ua-compatible',
