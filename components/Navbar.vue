@@ -1,28 +1,4 @@
 <template lang="pug">
-//- Multi-Line Array Literal
-//- https://github.com/pugjs/pug/issues/502
-//- answer by: ForbesLindesay commented on 23 Apr 2014
--
-    var naviItems = [
-        {
-            title: 'Home',
-            link: '/'
-        },
-        // now jumping between home and yolo works. not sure if is pwa or storyblok fecth data
-        {
-            title: 'Yolo | test',
-            link: '/yolo'
-        },        
-        {
-            title: 'About',
-            link: '/about'
-        },
-        {
-            title: 'Contact',
-            link: '/contact'
-        }
-    ];
-
 nav.navigation(role='navigation', v-bind:class='{ "is-nav-open": isNavOpen }')
     nuxt-link.logo-link(to='/', title='Home')
         .logo
@@ -35,14 +11,15 @@ nav.navigation(role='navigation', v-bind:class='{ "is-nav-open": isNavOpen }')
     .overlay
         nav.overlay-menu
             ul.items
-                each item in naviItems
-                    li.item
-                        nuxt-link.item-link(
-                            v-on:click.native='removeNavOverlay()',
-                            title=item.title,
-                            to=item.link
-                        )
-                            = item.title
+                //- css var logi to pass dynamic vars from vue to css
+                //- https://www.telerik.com/blogs/passing-variables-to-css-on-a-vue-component
+                li.item(v-for='(item, index) in naviItems', :style='cssVars')
+                    nuxt-link.item-link(
+                        v-on:click.native='removeNavOverlay()',
+                        :title='item.title',
+                        :to='item.link'
+                    )
+                        | {{ item.title }}
 </template>
 
 <script>
@@ -50,7 +27,29 @@ export default {
     data() {
         return {
             isNavOpen: false,
+            naviItems: [
+                {
+                    title: 'Home',
+                    link: '/',
+                },
+                {
+                    title: 'About',
+                    link: '/about',
+                },
+                {
+                    title: 'Contact',
+                    link: '/contact',
+                },
+            ],
         }
+    },
+
+    computed: {
+        cssVars() {
+            return {
+                '--navigation-item-number': this.naviItems.length,
+            }
+        },
     },
 
     methods: {
@@ -162,8 +161,7 @@ export default {
   // LI
   .item
     display: block
-    // divide by number of links
-    height: calc(100% / 4)
+    height: calc(100% / var(--navigation-item-number))
     position: relative
     opacity: 0
     display: flex
