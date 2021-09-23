@@ -33,6 +33,8 @@ export default {
             })
     },
 
+    // TODO: issue is here: storyblol pages, if you add ANY meta tag for the head, are restting all meta tags (even the one set on config file and not called here below)?
+
     // head() {
     //     const metaTitle = this.content.metaTitle
     //         ? `${this.content.metaTitle} | ${this.$config.metaHeadData.titleShort}`
