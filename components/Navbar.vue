@@ -40,6 +40,10 @@ export default {
                     title: 'Contact',
                     link: '/contact',
                 },
+                {
+                    title: 'Yolo - TEST',
+                    link: '/yolo',
+                },
             ],
         }
     },
