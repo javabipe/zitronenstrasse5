@@ -60,7 +60,8 @@ export default {
         },
     },
 
-    // TODO: check me again
+    // TODO: also here this line crash all logic.
+
     // head() {
     //     return {
     //         // OVERRIDE the logic in vue config for body element.
