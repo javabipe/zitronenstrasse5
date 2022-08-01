@@ -2,7 +2,7 @@
 .nuxt/
 
 # dist file at generate
-dist/
+public/
 
 # jest coverage folder
 coverage/
