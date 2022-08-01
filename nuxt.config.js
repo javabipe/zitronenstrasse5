@@ -14,7 +14,7 @@ const headDescription =
 
 // the URL set as variables: for redirect DNS
 // with httpS: in case redirect take care of it
-const appMainUrl = 'https://zitronenstrasse.com'
+const appMainUrl = 'https://zitronenstrasse20-eysp107qb-paulomouramartins.vercel.app'
 
 const authorName = 'Valerio Sillari'
 
