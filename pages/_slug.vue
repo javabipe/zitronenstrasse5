@@ -15,6 +15,7 @@
 
 <script>
 import transitionTime from '../assets/javascripts/utilities/transitionTime'
+import stringNameForHomePage from '../assets/javascripts/utilities/storyblok'
 
 const timeTransitionCalculation = (transitionTime / 2) * 1.2
 
@@ -31,23 +32,36 @@ export default {
     },
 
     asyncData(context) {
-        const placesList = [
-    {
-        // 001
-        // ChIJX2MutgxPqEcR2nvgHiQ0ojE
-        title: 'Geschwister Nothaft Café',
-        address: 'Schwarzastraße 9, 12055',
-        thumb: '001_nothaftcafes.jpg',
-        thumbCredits: 'Geschwister Nothaft Café FB Page',
-        website: 'http://nothaftcafes.com/',
-        fbPage: 'https://www.facebook.com/geschwisternothaft/',
-        position: {
-            lat: 52.472729,
-            lng: 13.454635,
-        },
-    }
-    ]
-    return placesList
+        // if slug is 'homepage', DO NOT create page but throw an error. this page is used as nuxt INDEX page.
+        // logic only for PROD. on DEV you can see the page, so you can play with it on storyblok interface (preview)
+        if (!context.isDev && context.params.slug === stringNameForHomePage) {
+            // basic inspiration to force getting an error page
+            // https://github.com/nuxt/nuxt.js/issues/2022
+            context.error({
+                statusCode: 404,
+                message: 'homepage slug as no page!',
+            })
+            return
+        }
+
+        // Load the JSON from the API
+        return context.app.$storyapi
+            .get(`cdn/stories/${context.params.slug}`, {
+                // Check if we are in the editor mode
+                version:
+                    context.query._storyblok || context.isDev
+                        ? 'draft'
+                        : 'published',
+            })
+            .then((res) => {
+                return res.data.story
+            })
+            .catch((res) => {
+                context.error({
+                    statusCode: res.response.status,
+                    message: res.response.data,
+                })
+            })
     },
 
     head() {
