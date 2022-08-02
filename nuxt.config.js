@@ -197,7 +197,7 @@ export default {
 
             return axios
                 .get(
-                    `https://api-us.storyblok.com/v2/cdn/stories?version=${version}&token=${token}&cv=${cache}`
+                    `https://api.storyblok.com/v2/cdn/stories?version=${version}&token=${token}&cv=${cache}`
                 )
                 .then((res) => {
                     const storyblockPages = res.data.stories.map(
